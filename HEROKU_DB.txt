@@ -1,0 +1,5 @@
+DB_URL
+mysql://
+bb873a3227394b:1e8b5e0c             USUARIO:CONTRASEÑA
+@us-cdbr-east-05.cleardb.net/       SERVIDOR DONDE NOS CONECTAMOS
+heroku_97b3c49ca6bee4e              NOMBRE BASE DE DATOS
