@@ -1,0 +1,97 @@
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title Unidad 2: El oficio del historiador
+  link(rel='stylesheet' href='css_unidades/bootstrap.min.css')
+  link(rel='stylesheet' href='css_unidades/font-awesome.min.css')
+  link(rel='stylesheet' href='css_unidades/normalize.css')
+  link(href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css')
+  link(href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css')
+  link(rel='stylesheet' href='css_unidades/style.css')
+  script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
+  script.
+    window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\\/script>')
+  script(src='js/jquery-1.11.2.min.js')
+  script(src='js/modernizr.js')
+  script(src='js/bootstrap.min.js')
+  script(src='js/main.js')
+// ======================================== Boton ir arriba ========================================
+i.btn-up.fa.fa-arrow-circle-o-up.hidden-xs
+// ======================================== Navegación ========================================
+header.full-reset.header
+  // ======================================== Logo(Nombre INS) ========================================
+  .full-reset.logo
+    span.hidden-lg.hidden-md Lorem
+    span.hidden-xs.hidden-sm Unidad 2: El oficio del historiador.
+  // ======================================== Links de navegación ========================================
+  nav.full-reset.navigation
+    ul.full-reset.list-unstyled
+      li
+        a(href='/inicio') Volver al inicio
+  // ======================================== Boton menu mobil ========================================
+  a.hidden-sm.hidden-md.hidden-lg.pull-right.button-menu-mobile.show-close-menu-m(href='#')
+    i.fa.fa-ellipsis-v
+// ======================================== contenido de la pagina ========================================
+section.full-reset(style='min-height: 850px;')
+  .jumbotron
+    h2.text-center.titles Bienvenido a la unidad 2
+    p.text-center.lead
+      | En esta unidad rastrear&aacute;s informaci&oacute;n a trav&eacute;s de documentos de fuentes primarias, para lo cual dispondr&aacute;s: de un video tutorial junto con un documento que ilustra los pasos para que te conviertas en todo un historiador.
+  // ======================================== Info. ========================================
+  article
+    .container
+      .row
+        .col-xs-12
+          br
+          br
+          h4.titles Te invitamos a resolver las siguientes actividades:
+          br
+          p.lead
+            if( usuarioLogged.group != "1")
+              img(src='img_unidades/Iconometa.png' alt='')
+              a(href='cuestionario2' target='_blank') Consulta Metacognitiva Inicial U.2 
+              br
+              br
+            img(src='img_unidades/Iconovideo.png' alt='')
+            a(href='https://youtu.be/HH7EKtju6A4' target='_blank') Video explicativo Investigaci&oacute;n Hist&oacute;rica #1 
+            br
+            br
+            img(src='img_unidades/Iconovideo.png' alt='')
+            a(href='https://youtu.be/01TeHjGiPlI' target='_blank')  V&iacute;deo Explicativo Investigaci&oacute;n Hist&oacute;rica #2 
+            br
+            br
+            img(src='img_unidades/Iconovideo.png' alt='')
+            a(href='https://www.youtube.com/watch?v=kNhfkmOv88E' target='_blank')  V&iacute;deo: De la United Fruit Company a Chiquita Brands
+            br
+            br
+            img(src='img_unidades/IconoU2.png' alt='')
+            a(href='PasosInvHist.pdf' target='_blank')  Pasos para la investigaci&oacute;n hist&oacute;rica 
+            br
+            br
+            img(src='img_unidades/IconoU2.png' alt='')
+            a(href='Tarea2.pdf' target='_blank')  Tarea: Llevemos a cabo el oficio del historiador 
+            br
+            br
+            if( usuarioLogged.group != "1")
+              img(src='img_unidades/Iconometa.png' alt='')
+              a(href='cuestionario2_2' target='_blank')  Consulta Metacognitiva U.2 
+              br
+              br
+            img(src='img_unidades/IconoU2.png' alt='')
+            a(href='Glosario.pdf' target='_blank')  Glosario 
+            br
+            br
+            img(src='img_unidades/IconoU2.png' alt='')
+            a(href='TallerFinal.pdf' target='_blank')  Tarea Final
+            br
+            br
+            img(src='img_unidades/Iconotest.png' alt='')
+            a(href='https://docs.google.com/forms/d/1_k4JPwN_de6I2Dv6g6A23coLhiDPJuEsltzxhLd8yWc/edit' target='_blank') &iquest;Cu&aacute;nto aprendiste?
+            br
+            br
+            if( usuarioLogged.group != "1")
+              img(src='img_unidades/Iconometa.png' alt='')
+              a(href='cuestionario2_3' target='_blank') Consulta Metacognitiva Final U.2. 
+              br
+              br
+  .divider-general

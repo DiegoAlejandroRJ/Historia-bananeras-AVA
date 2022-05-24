@@ -1,0 +1,99 @@
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title Unidad 1: Soy un explorador de la historia
+  link(rel='stylesheet' href='css_unidades/bootstrap.min.css')
+  link(rel='stylesheet' href='css_unidades/font-awesome.min.css')
+  link(rel='stylesheet' href='css_unidades/normalize.css')
+  link(href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css')
+  link(href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css')
+  link(rel='stylesheet' href='css_unidades/style.css')
+  script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
+  script.
+    window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\\/script>')
+  script(src='js/jquery-1.11.2.min.js')
+  script(src='js/modernizr.js')
+  script(src='js/bootstrap.min.js')
+  script(src='js/main.js')
+
+// ======================================== Navegación ========================================
+header.full-reset.header
+  // ======================================== Logo(Nombre INS) ========================================
+  .full-reset.logo
+    span.hidden-lg.hidden-md 
+    span.hidden-xs.hidden-sm Unidad 1: Soy un explorador de la historia.
+  // ======================================== Links de navegación ========================================
+  nav.full-reset.navigation
+    ul.full-reset.list-unstyled
+      li
+        a(href='/inicio') Volver al inicio
+  // ======================================== Mega menu ========================================
+  .full-reset.mega-menu
+    .container
+      .row
+    i.fa.fa-times-circle.btm-mega-menu.close-mega-menu.fa-2x
+  // ======================================== Boton menu mobil ========================================
+  a.hidden-sm.hidden-md.hidden-lg.pull-right.button-menu-mobile.show-close-menu-m(href='#')
+    i.fa.fa-ellipsis-v
+section.full-reset(style='min-height: 850px;')
+  .jumbotron
+    h2.text-center.titles Introducci&oacute;n
+    p.text-center.lead
+      | En esta Unidad iniciaremos con el estudio de la Masacre de las Bananeras. Aprender&aacute;s a ubicar en el mapamundi lugares y hechos hist&oacute;ricos, mediante Google Earth.
+      | Adicionalmente, comprender&aacute;s la importancia de conocer el contexto geogr&aacute;fico de un hecho hist&oacute;rico y de las sociedades, culturas y comunidades que lo viven.
+  // ======================================== Info. ========================================
+  // ======================================== contenido de la pagina ========================================
+  article
+    .container
+      .row
+        .col-xs-12
+          br
+          br
+          h4.titles Te invitamos a resolver las siguientes actividades:
+          p= usuarioLogged.name
+          br
+          p.lead
+            if( usuarioLogged.group != "1")
+              img(src="img_unidades/Iconometa.png")
+              a(href='cuestionario1' target='_blank')  Cuestionario metacognitivo 
+              br
+              br
+            img(src='img_unidades/Iconovideo.png' alt='')
+            a(href='https://www.youtube.com/watch?v=xNfIivmUFXY' target='_blank')  Video explicativo: Masacre de las bananeras
+            br
+            br
+            img(src='img_unidades/Iconovideo.png' alt='')
+            a(href='https://www.youtube.com/watch?v=5vjzZW0CPZE' target='_blank')  Video: Masacre de las bananeras, 90 a&ntilde;os despu&eacute;s 
+            br
+            br
+            img(src='img_unidades/planeta.png' alt='') 
+            a(href='Lectura1.pdf' target='_blank')  Lectura de la Masacre de las bananeras 
+            br
+            br
+            img(src='img_unidades/planeta.png' alt='')
+            a(href='Lectura2.pdf' target='_blank')  Lectura #2. Masacre de las bananeras 
+            br
+            br
+            if( usuarioLogged.group != "1")
+              img(src='img_unidades/Iconometa.png' alt='')
+              a(href='cuestionario1_2' target='_blank')  Cuestionario metacognitivo intermedio 
+              br
+              br
+            img(src='img_unidades/planeta.png' alt='')
+            a(href='TareaEarth.pdf' target='_blank')  Tarea: Soy un explorador de la historia 
+            br
+            br
+            img(src='img_unidades/planeta.png' alt='')
+            a(href='Glosario.pdf' target='_blank')  Glosario 
+            br
+            br
+            img(src='img_unidades/Iconotest.png' alt='')
+            a(href='https://docs.google.com/forms/d/1Des4qDxmTDq9YDO6qPfYEJHCZ_TVtwsIhEB1dAdGrIM/edit' target='_blank') Evaluaci&oacute;n: &iquest;cu&aacute;nto aprend&iacute;? 
+            br
+            br
+            if( usuarioLogged.group != "1")
+              img(src='img_unidades/Iconometa.png' alt='')
+              a(href='cuestionario1_3' target='_blank')  Cuestionario metacognitivo final. 
+              br
+              br
+  .divider-general

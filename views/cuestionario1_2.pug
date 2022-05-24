@@ -1,0 +1,114 @@
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title Cuestionario
+  link(rel='stylesheet' href='css_unidades/bootstrap.min.css')
+  link(rel='stylesheet' href='css_unidades/font-awesome.min.css')
+  link(rel='stylesheet' href='css_unidades/normalize.css')
+  link(href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css')
+  link(href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css')
+  link(rel='stylesheet' href='css_unidades/style.css')
+
+// ======================================== Boton ir arriba ========================================
+i.btn-up.fa.fa-arrow-circle-o-up.hidden-xs
+// ======================================== Navegación ========================================
+header.full-reset.header
+  // ======================================== Logo(Nombre INS) ========================================
+  .full-reset.logo
+    span.hidden-lg.hidden-md Lorem
+    span.hidden-xs.hidden-sm Cuestionario
+  // ======================================== Links de navegación ========================================
+  nav.full-reset.navigation
+    ul.full-reset.list-unstyled
+      li
+        a(href='inicio') Volver al inicio     
+  // ======================================== Mega menu ========================================
+  .full-reset.mega-menu
+    .container
+      .row
+    i.fa.fa-times-circle.btm-mega-menu.close-mega-menu.fa-2x
+  // ======================================== Boton menu mobil ========================================
+  a.hidden-sm.hidden-md.hidden-lg.pull-right.button-menu-mobile.show-close-menu-m(href='#')
+    i.fa.fa-ellipsis-v
+// ======================================== contenido de la pagina ========================================
+section.full-reset(style='min-height: 850px;')
+  .jumbotron
+    h2.text-center.titles  PLANEO EL ESTUDIO DE MI UNIDAD
+      // ======================================== Info. ========================================
+  article
+    .container
+
+      
+      .row
+        .col-xs-12
+          
+          h3.titles Te invitamos a resolver las siguientes preguntas:
+          br
+          
+          if(errores)
+            each error in errores 
+              .alert.col.alert-danger.text-center= error.mensaje
+
+          form(action="/cuestionario1", method="POST")
+            select#Q.hidden(name="Q")  
+                option(value='1_2')  
+            br
+            br 
+            .form-group
+              h4 Monitoreo    
+              p
+              | 1. Teniendo en cuenta que has desarrollado la mitad de las actividades de la unidad, ¿Cuántos días crees que necesitas para terminarla?
+              img(src='monitoreo1.jpg')
+              br
+              br
+              select#P1(name="P1")
+                option(value='...')  ...
+                option(value='1 día')  1 día
+                option(value='3 días')  3 días
+                option(value='5 días')  5 días
+                option(value='7 días')  7 días
+              br
+              br  
+              br
+            .form-group
+              
+              h4 Estrategias de Aprendizaje
+              
+              p 2. Al iniciar la unidad, elegiste la estrategia:
+                p= respuestas[0].P2 
+              p ...¿consideras que fue útil emplear esta estrategia?             
+              select#P2(name="P2")
+                option(value='...')  ...
+                option(value='SI')  SI
+                option(value='NO')  NO
+              br
+              br
+              p 
+                |2.1. SOLAMENTE si tu respuesta anterior es "NO", elige otra estrategia de aprendizaje:
+              select#P2a(name="P2a")
+                option(value='...')  ...
+                option(value='Realiza un mapa conceptual - Clasifica la Información - Lee con atención las preguntas planteadas')  Realiza un mapa conceptual - Clasifica la Informaci&oacute;n - Lee con atenci&oacute;n las preguntas planteadas
+                option(value='Escribe las ideas principales - Clasifica Información - Busca el significado de palabras desconocidas')  Escribe las ideas principales - Clasifica Informaci&oacute;n - Busca el significado de palabras desconocidas
+                option(value='Realiza preguntas de comprensión - Clasifica Información - Relaciona el tema con conocimientos previos')  Realiza preguntas de comprensi&oacute;n - Clasifica Informaci&oacute;n - Relaciona el tema con conocimientos previos
+                option(value='Extrae la Información importante - Clasifica Información - Reinicia o regresa al texto')  Extrae la Informaci&oacute;n importante - Clasifica Informaci&oacute;n - Reinicia o regresa al texto   
+              br
+              br
+              br
+            .form-group
+              h4 Conocimiento
+              p 
+                | 3. ¿Cuánto crees que has aprendido del tema?
+                br
+                select#P3(name="P3")
+                  option(value='...')  ...
+                  option(value='1')  1-No he aprendido nada del tema
+                  option(value='2')  2-He aprendido un poco del tema
+                  option(value='3')  3-He aprendido del tema
+                  option(value='4')  4-He aprendido bastante del tema
+                  option(value='5')  5-He aprendido completamente el tema
+              br
+              br
+            input(type='submit' value='Enviar respuestas')
+              
+                
+

@@ -1,0 +1,66 @@
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title Herramientas tecnológicas
+  link(rel='stylesheet' href='css_unidades/bootstrap.min.css')
+  link(rel='stylesheet' href='css_unidades/font-awesome.min.css')
+  link(rel='stylesheet' href='css_unidades/normalize.css')
+  link(href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css')
+  link(href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css')
+  link(rel='stylesheet' href='css_unidades/style.css')
+  script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
+  script.
+    window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\\/script>')
+  script(src='js/jquery-1.11.2.min.js')
+  script(src='js/modernizr.js')
+  script(src='js/bootstrap.min.js')
+  script(src='js/main.js')
+
+// ======================================== Navegación ========================================
+header.full-reset.header
+  // ======================================== Logo(Nombre INS) ========================================
+  .full-reset.logo
+    span.hidden-lg.hidden-md 
+    span.hidden-xs.hidden-sm Herramientas Tecnológicas
+  // ======================================== Links de navegación ========================================
+  nav.full-reset.navigation
+    ul.full-reset.list-unstyled
+      li
+        a(href='/inicio') Volver al inicio
+  // ======================================== Mega menu ========================================
+  .full-reset.mega-menu
+    .container
+      .row
+    i.fa.fa-times-circle.btm-mega-menu.close-mega-menu.fa-2x
+  // ======================================== Boton menu mobil ========================================
+  a.hidden-sm.hidden-md.hidden-lg.pull-right.button-menu-mobile.show-close-menu-m(href='#')
+    i.fa.fa-ellipsis-v
+section.full-reset(style='min-height: 850px;')
+  .jumbotron
+    h2.text-center.titles Herramientas Tecnológicas
+    p.text-center.lead
+      |A continuación encontrarás videos tutoriales para el uso de las herramientas digitales propuestas en el curso. 
+  // ======================================== Info. ========================================
+  // ======================================== contenido de la pagina ========================================
+  article
+    .container
+      .row
+        .col-xs-12
+          br
+          br
+          h4.titles Estos videos tutoriales te serán útiles para desarrollar las actividades.
+          br
+          p.lead
+            img(src='img_unidades/Iconovideo.png' alt='')
+            a(href='https://youtu.be/IaUfrsl7egA' target='_blank') Tutorial de uso de Google Earth Online.
+            br
+            br
+            img(src='img_unidades/Iconovideo.png' alt='')
+            a(href='https://youtu.be/JRmGt5zVfeA' target='_blank')  Tutorial de elaboración de líneas de tiempo con Visme.
+            br
+            br
+            img(src='img_unidades/Iconovideo.png' alt='')
+            a(href='https://www.youtube.com/watch?v=8gXlx9dFmC0' target='_blank') Tutorial de uso de Coggle.
+            br
+            br
+  .divider-general

@@ -1,0 +1,47 @@
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title Ingreso
+  link(rel='stylesheet' href='css_unidades/bootstrap.min.css')
+  link(rel='stylesheet' href='css_unidades/font-awesome.min.css')
+  link(rel='stylesheet' href='css_unidades/normalize.css')
+  link(href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css')
+  link(href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css')
+  link(rel='stylesheet' href='css_unidades/style.css')
+
+// ======================================== Boton ir arriba ========================================
+i.btn-up.fa.fa-arrow-circle-o-up.hidden-xs
+// ======================================== Navegación ========================================
+header.full-reset.header
+  // ======================================== Logo(Nombre INS) ========================================
+  .full-reset.logo
+    span.hidden-lg.hidden-md Lorem
+    span.hidden-xs.hidden-sm Curso corto: la Masacre de las bananeras (1928)
+  
+  .full-reset.mega-menu
+    .container
+      .row
+    i.fa.fa-times-circle.btm-mega-menu.close-mega-menu.fa-2x
+  // ======================================== Boton menu mobil ========================================
+  a.hidden-sm.hidden-md.hidden-lg.pull-right.button-menu-mobile.show-close-menu-m(href='#')
+    i.fa.fa-ellipsis-v
+// ======================================== contenido de la pagina ========================================
+section.full-reset(style='min-height: 850px;')
+  .jumbotron
+    h2.text-center.titles  Ingresa al curso
+      // ======================================== Info. ========================================
+  article
+    .container
+      .row
+        .col-xs-12          
+          if(errores)
+            each error in errores 
+              .alert.col.alert-danger.text-center= error.mensaje
+
+          form(action="/", method="POST")
+            .form-group
+              label(for = "correo") Correo:
+              input#correo(type='email' placeholder='Ingrese correo electrónico', name ="correo", value= correoIngresado)
+              br
+
+            input(type='submit' value='Enviar respuestas')

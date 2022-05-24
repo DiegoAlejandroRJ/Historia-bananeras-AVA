@@ -1,0 +1,22 @@
+{
+  "name": "ava_mb1928",
+  "version": "1.0.0",
+  "description": "Ambiente virtual de aprendizaje con andamiaje metacognitivo",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "type": "module",
+  "author": "Diego Alejandro Ramírez Jaimes",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "pug": "^3.0.2",
+    "sequelize": "^6.19.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.16"
+  }
+}
