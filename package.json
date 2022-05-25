@@ -2,6 +2,9 @@
   "name": "ava_mb1928",
   "version": "1.0.0",
   "description": "Ambiente virtual de aprendizaje con andamiaje metacognitivo",
+  "engines": {
+    "node": "16.14.2"
+    },
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
