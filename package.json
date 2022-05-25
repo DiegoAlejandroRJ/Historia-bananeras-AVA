@@ -4,6 +4,7 @@
   "description": "Ambiente virtual de aprendizaje con andamiaje metacognitivo",
   "main": "index.js",
   "scripts": {
+    "start": "index.js",
     "dev": "nodemon index.js"
   },
   "type": "module",
