@@ -1,7 +1,7 @@
 import { Respuestas1 } from "../models/Respuestas1.js";
 import { usuarioLogged } from "./ingresoController.js";
 import { guardarRespuestas1 } from "./respuestas1Controller.js";
-////"start": "nodemon index.js",
+
 const paginaIngreso = (req, res)=>{ 
     res.render('ingreso', {
     });
