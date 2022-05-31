@@ -7,7 +7,9 @@ const guardarRespuestas1 = async (req, res) =>{
     const {Q, P1, P2, P2a, P3} = req.body;
     
     const errores = [];
-    //(correo.trim()==='')&&errores.push({mensaje: 'El correo está vacío'});
+    (P1.trim()==='...')&&errores.push({mensaje: 'Por favor seleccione una opcion para la pregunta 1'});
+    (P2.trim()==='...')&&errores.push({mensaje: 'Por favor seleccione una opcion para la pregunta 2'});
+    (P3.trim()==='...')&&errores.push({mensaje: 'Por favor seleccione una opcion para la pregunta 3'});
 
     if (errores.length > 0) {
         //mostrar la vista con errores
