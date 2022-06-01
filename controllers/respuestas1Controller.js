@@ -12,22 +12,19 @@ const guardarRespuestas1 = async (req, res) =>{
     (P2a === '')&&errores.push({mensaje: 'Por favor seleccione una respuesta para la pregunta 2a'});
     (P3 ==='')&&errores.push({mensaje: 'Por favor seleccione una respuesta para la pregunta 3'});
 
+    let newQ, backPressed;
+    let respuestas = [];
+    switch(Q){
+        case '1': { backPressed= "unidad1"; break;}
+        case '1_2': {newQ = '1'; backPressed= "unidad1"; break;}
+        case '1_3': {newQ = '1_2'; backPressed= "unidad1"; break;}
+        case '2': { backPressed= "unidad2"; break;}
+        case '2_2': {newQ = '2'; backPressed= "unidad2"; break;}
+        case '2_3': {newQ = '2_2'; backPressed= "unidad2"; break;}
+    }
+    
     if (errores.length > 0) {
         //mostrar la vista con errores
-
-        let newQ;
-        let respuestas = [];
-        switch(Q){
-            case '1_2': {newQ = '1'; break;}
-            case '1_3': {newQ = '1_2'; break;}
-            case '2_2': {newQ = '2'; break;}
-            case '2_3': {newQ = '2_2'; break;}
-        }
-        //listo san, favor prueba todo completo y me cuentas que encuentras...acá localmente?
-        //sip, perdon
-        //lo pruebas en local, si funciona, lo subes, le haces el push al heroku para que quede con los cambios, si quieres lo vuelves a probar para estar super seguros
-        //me llamas si algo falla que voy aca hacer una tarea con vicky
-        // <3 Tengo miedo. Valeeeee!
         try {
             respuestas = await Respuestas1.findAll({where:{user:usuarioLogged.user, Q:newQ}});
         } catch (error) {
@@ -56,9 +53,8 @@ const guardarRespuestas1 = async (req, res) =>{
                 P2a,
                 P3
             });
-
-            res.redirect('/inicio') //a donde lo mando????
-
+          
+            res.redirect("/"+backPressed)
         } catch (error) {
             console.log(error)
         }
