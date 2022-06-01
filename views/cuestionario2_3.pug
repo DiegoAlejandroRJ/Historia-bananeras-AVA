@@ -42,7 +42,7 @@ section.full-reset(style='min-height: 850px;')
           
           h3.titles Te invitamos a resolver las siguientes preguntas:
           br
-          
+          p= usuarioLogged.name
           if(errores)
             each error in errores 
               .alert.col.alert-danger.text-center= error.mensaje
