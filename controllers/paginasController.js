@@ -38,7 +38,6 @@ const paginaCuestionario1_2 = async (req, res)=>{
         console.log(respuestas)
         res.render('cuestionario1_2',{
             respuestas
-
         });
     } catch (error) {
         console.log(error);

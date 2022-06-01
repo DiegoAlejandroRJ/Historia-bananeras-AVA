@@ -51,7 +51,9 @@ section.full-reset(style='min-height: 850px;')
             select#Q.hidden(name="Q")
                 option(value='1_3')
             br
-            br    
+            br
+            select#formValue.hidden(name="formValue")
+              option(value='cuestionario1_3')    
             .form-group
               h4 Monitoreo    
               p 1. En la mitad de la unidad elegiste 
@@ -59,7 +61,7 @@ section.full-reset(style='min-height: 850px;')
               p para terminarla. ¿crees que estimaste bien el tiempo?
               br 
               select#P1(name="P1")
-                  option(value='...')  ...
+                  option(value=P1)=P1
                   option(value='1')  SI
                   option(value='2')  NO
               br
@@ -68,13 +70,13 @@ section.full-reset(style='min-height: 850px;')
             .form-group
               h4 Estrategias de Aprendizaje
               p
-              | 2. Durante la unidad elegiste la(s) estrategia(s) 
-              p= respuestas[0].P1
+              | 2. Durante la unidad elegiste la etrategia 
+              p= respuestas[0].P2
               p= respuestas[0].P2a
               p ¿crees que esto fue útil para tu aprendizaje?
               br
               select#P2(name="P2")
-                option(value='...')  ...
+                option(value=P2)=P2 
                 option(value='1')  SI
                 option(value='2')  NO
               br
@@ -86,7 +88,7 @@ section.full-reset(style='min-height: 850px;')
                 | 3. ¿Cuánto crees que has aprendido del tema?
                 br
                 select#P3(name="P3")
-                  option(value='...')  ...
+                  option(value=P3)=P3
                   option(value='1')  1-No he aprendido nada del tema
                   option(value='2')  2-He aprendido un poco del tema
                   option(value='3')  3-He aprendido del tema

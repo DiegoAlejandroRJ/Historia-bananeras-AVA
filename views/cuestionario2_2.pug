@@ -52,6 +52,8 @@ section.full-reset(style='min-height: 850px;')
                 option(value='2_2')    
             br
             br
+            select#formValue.hidden(name="formValue")
+              option(value='cuestionario2_2')
             .form-group
               h4 Monitoreo    
               p
@@ -60,7 +62,7 @@ section.full-reset(style='min-height: 850px;')
               br
               br  
               select#P1(name="P1")
-                option(value='...')  ...
+                option(value=P1)=P1
                 option(value='1 día')  1 día
                 option(value='3 días')  3 días
                 option(value='5 días')  5 días
@@ -74,7 +76,7 @@ section.full-reset(style='min-height: 850px;')
                 p= respuestas[0].P2
               p ..¿consideras que fue útil emplear esta estrategia?
               select#P2(name="P2")
-                  option(value='...')  ...
+                  option(value=P2)=P2
                   option(value='SI')  SI
                   option(value='NO')  NO
               br
@@ -82,7 +84,8 @@ section.full-reset(style='min-height: 850px;')
               p 
                 |2.1. SOLAMENTE si tu respuesta anterior es "NO", elige otra estrategia de aprendizaje:
               select#P2a(name="P2a")
-                option(value='...')  ...
+                option(value=P2a)=P2a
+                option(value= 'La Estrategia que usé fue útil') La Estrategia que usé fue útil
                 option(value='Realiza un mapa conceptual - Clasifica la Información - Lee con atención las preguntas planteadas')  Realiza un mapa conceptual - Clasifica la Informaci&oacute;n - Lee con atenci&oacute;n las preguntas planteadas
                 option(value='Escribe las ideas principales - Clasifica Información - Busca el significado de palabras desconocidas')  Escribe las ideas principales - Clasifica Informaci&oacute;n - Busca el significado de palabras desconocidas
                 option(value='Realiza preguntas de comprensión - Clasifica Información - Relaciona el tema con conocimientos previos')  Realiza preguntas de comprensi&oacute;n - Clasifica Informaci&oacute;n - Relaciona el tema con conocimientos previos
@@ -96,7 +99,7 @@ section.full-reset(style='min-height: 850px;')
                 | 3. ¿Cuánto crees que has aprendido del tema?
                 br
                 select#P3(name="P3")
-                  option(value='...')  ...
+                  option(value=P3)=P3
                   option(value='1')  1-No he aprendido nada del tema
                   option(value='2')  2-He aprendido un poco del tema
                   option(value='3')  3-He aprendido del tema
