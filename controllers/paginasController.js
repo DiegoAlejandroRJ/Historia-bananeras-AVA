@@ -48,7 +48,7 @@ const paginaCuestionario1_2 = async (req, res)=>{
 //arrgelo 1 2
 const paginaCuestionario1_3 = async (req, res)=>{ 
     try {
-        const respuestas = await Respuestas1.findAll({where:{user:usuarioLogged.user, Q:"1_2"}});
+        const respuestas = await Respuestas1.findAll({where:{user:usuarioLogged.user, Q:"1"}});
         res.render('cuestionario1_3',{
             respuestas,
             usuarioLogged
@@ -78,7 +78,7 @@ const paginaCuestionario2_2 = async (req, res)=>{
 
 const paginaCuestionario2_3 = async(req, res)=>{ 
     try {
-        const respuestas = await Respuestas1.findAll({where:{user:usuarioLogged.user, Q: "2_2"}});
+        const respuestas = await Respuestas1.findAll({where:{user:usuarioLogged.user, Q: "2"}});
         res.render('cuestionario2_3',{
             respuestas,
             usuarioLogged

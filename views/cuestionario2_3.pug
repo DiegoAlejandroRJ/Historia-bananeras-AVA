@@ -56,7 +56,7 @@ section.full-reset(style='min-height: 850px;')
               option(value='cuestionario2_3')
             .form-group
               h4 Monitoreo    
-              p 1. En la mitad de la unidad elegiste
+              p 1. Al inicio de la unidad elegiste
                 p= respuestas[0].P1
               p para terminar la unidad. ¿crees que estimaste bien el tiempo?           
               br
@@ -70,9 +70,8 @@ section.full-reset(style='min-height: 850px;')
             .form-group
               h4 Estrategias de Aprendizaje
               p
-                | 2. Durante la unidad elegiste la(s) estrategia(s)
-                p= respuestas[0].P1
-                p= respuestas[0].P2a
+                | 2. -una de la(s) estrategia(s) que decidiste emplear durante la unidad fue
+                p= respuestas[0].P2
                 p ¿crees que esto fue útil para tu aprendizaje?        
                 br
                 select#P2(name="P2")

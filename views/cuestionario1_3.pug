@@ -56,8 +56,8 @@ section.full-reset(style='min-height: 850px;')
               option(value='cuestionario1_3')    
             .form-group
               h4 Monitoreo    
-              p 1. En la mitad de la unidad elegiste 
-                p= respuestas[0].P1 
+              p 1. Al inicio de la unidad elegiste 
+              p= respuestas[0].P1 
               p para terminarla. ¿crees que estimaste bien el tiempo?
               br 
               select#P1(name="P1")
@@ -72,7 +72,6 @@ section.full-reset(style='min-height: 850px;')
               p
               | 2. Durante la unidad elegiste la etrategia 
               p= respuestas[0].P2
-              p= respuestas[0].P2a
               p ¿crees que esto fue útil para tu aprendizaje?
               br
               select#P2(name="P2")
