@@ -37,7 +37,8 @@ const paginaCuestionario1_2 = async (req, res)=>{
         const respuestas = await Respuestas1.findAll({where:{user:usuarioLogged.user, Q:"1"}});
         console.log(respuestas)
         res.render('cuestionario1_2',{
-            respuestas
+            respuestas,
+            usuarioLogged
         });
     } catch (error) {
         console.log(error);
